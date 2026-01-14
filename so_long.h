@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 10:07:05 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/14 10:43:01 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/14 11:27:04 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/14 11:27:04 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ typedef struct s_game
 	//t_img	player;
 }	t_game;
 
-static int	arg_chk(int ac, char **av);
+char		*map_parser(char *map);
 
 #endif

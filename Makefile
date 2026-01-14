@@ -9,8 +9,9 @@ MAP_DIR		= maps
 TEXTURE_DIR	= textures
 
 # Source files
-SRCS		= $(SRC_DIR)/so_long.c \
-
+SRCS		= $(SRC_DIR)/parsing.c \
+				$(SRC_DIR)/handle_error.c \
+			 	$(SRC_DIR)/so_long.c 
 # Object files
 OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
