@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:15:12 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/14 11:15:12 by flvejux          ###   ########.ch       */
+/*   Updated: 2026/01/16 10:34:09 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	chk_extension(char *file);
 
-static int	arg_chk(int ac, char **av)
+int	arg_chk(int ac, char **av)
 {
 	if (ac != 2)
 	{
@@ -31,7 +31,6 @@ static int	arg_chk(int ac, char **av)
 		ft_putendl_fd("reading map error", 1);
 		return (FALSE);
 	}
-	ft_putendl_fd("Valid ✔", 0);
 	return (TRUE);
 }
 
@@ -45,11 +44,70 @@ static int	chk_extension(char *file)
 	return (FALSE);
 }
 
-int main(int ac, char **av)
+int	chk_width(char **map, t_game *game)
 {
-	if (ac > 1)
+	int	i;
+
+	if (!map || !map[0])
+		return (FALSE);
+	game->map_w = ft_strlen(map[0]);
+	i = 1;
+	while (map[i])
 	{
-		arg_chk(ac, av);
-		printf("%s", map_parser(av[1]));
+		if ((int)ft_strlen(map[i]) != game->map_w)
+			{
+				ft_putendl_fd("Error\nMap is not rectangular", 1);
+				return (FALSE);
+			}
+		i++;
 	}
+	return (TRUE);
 }
+int	chk_map_walls(char **map, t_game *game)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (map[0][i])
+	{
+		if (map[0][i] != '1' || map[game->map_h - 1][i] != '1')
+		{
+			ft_putendl_fd("Error\nMap is not surrounded by walls", 1);
+			return (FALSE);
+		}
+		i++;
+	}
+	j = 0;
+	while (j < game->map_h)
+	{
+		if (map[j][0] != '1' || map[j][game->map_w - 1] != '1')
+		{
+			ft_putendl_fd("Error\nMap is not surrounded by walls", 1);
+			return (FALSE);
+		}
+		j++;
+	}
+	return (TRUE);
+}
+
+int	chk_is_rectangular(char **map, t_game *game)
+{
+	int	i;
+
+	if (!map || !map[0])
+		return (FALSE);
+	game->map_w = ft_strlen(map[0]);
+	i = 1;
+	while (map[i])
+	{
+		if ((int)ft_strlen(map[i]) != game->map_w)
+		{
+			ft_putendl_fd("Error\nMap is not rectangular", 1);
+			return (FALSE);
+		}
+		i++;
+	}
+	return (TRUE);
+}
+

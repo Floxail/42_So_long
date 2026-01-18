@@ -11,7 +11,9 @@ TEXTURE_DIR	= textures
 # Source files
 SRCS		= $(SRC_DIR)/parsing.c \
 				$(SRC_DIR)/handle_error.c \
-			 	$(SRC_DIR)/so_long.c 
+			 	$(SRC_DIR)/so_long.c \
+				$(SRC_DIR)/map_is_valid.c \
+				$(SRC_DIR)/flood_fill.c \
 # Object files
 OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
