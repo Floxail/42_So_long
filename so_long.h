@@ -6,7 +6,7 @@
 /*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:27:04 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/16 09:48:48 by flox             ###   ########.fr       */
+/*   Updated: 2026/01/18 12:19:12 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@
 # include "./libft/libft.h"
 # include "./minilibx-linux/mlx.h"
 
+typedef struct s_img
+{
+	void	*wall;
+	void	*floor;
+	void	*player;
+	void	*collectible;
+	void	*exit;
+	void	*enemy;
+	int		img_w;
+	int		img_h;
+}
+
 typedef struct s_game
 {
 	void	*mlx_ptr;
@@ -38,6 +50,7 @@ typedef struct s_game
 	int		collect_count;
 	int		exit_count;
 	int		enemy_count;
+	t_img 	img;
 }	t_game;
 
 char		**parse_map(char *filepath, t_game *game);
