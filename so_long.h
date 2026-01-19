@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 11:27:04 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/18 12:19:12 by flox             ###   ########.fr       */
+/*   Created: 2026/01/19 08:06:19 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/19 08:06:56 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_img
 	void	*enemy;
 	int		img_w;
 	int		img_h;
-}
+} t_img;
 
 typedef struct s_game
 {
@@ -59,5 +59,10 @@ int			chk_is_rectangular(char **map, t_game *game);
 int			chk_map_walls(char **map, t_game *game);
 int			chk_map_content(char **map, t_game *game);
 int			chk_valid_path(char **map, t_game *game);
+void		init_graphics(t_game *game);
+void		render_map(t_game *game);
+int			key_hook(int keycode, t_game *game);
+void		close_game(t_game *game);
+void		move_player(t_game *game, int x, int y);
 
 #endif
