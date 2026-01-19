@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   manage_game_err.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 19/01/2026 08:36:53 by flvejux           #+#    #+#             */
-/*   Updated: 19/01/2026 08:38:48 by flvejux          ###   ########.ch       */
+/*   Created: 2019/01/20 08:36:53 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/19 14:02:52 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	free_map(t_game *game)
 	free(game->map);
 }
 
-void	close_game(t_game *game)
+int close_game(t_game *game)
 {
 	if (!game)
 		exit(0);

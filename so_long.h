@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:19:08 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 12:19:12 by flvejux          ###   ########.ch       */
+/*   Updated: 2026/01/19 14:05:30 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ int			chk_map_walls(char **map, t_game *game);
 int			chk_map_content(char **map, t_game *game);
 int			chk_valid_path(char **map, t_game *game);
 void		init_graphics(t_game *game);
-void		render_map(t_game *game);
+int			render_map(t_game *game);
 int			key_hook(int keycode, t_game *game);
-void		close_game(t_game *game);
+int			close_game(t_game *game);
 void		move_player(t_game *game, int x, int y);
 void		error_exit(t_game *game, char *str);
 

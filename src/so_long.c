@@ -6,7 +6,7 @@
 /*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:16:12 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/18 11:41:28 by flox             ###   ########.fr       */
+/*   Updated: 2026/01/19 14:03:35 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int	main(int ac, char **av)
 	init_graphics(&game);
 	render_map(&game);
 	mlx_hook(game.win_ptr, 2, 1L << 0, key_hook, &game);
-	mlx_hook(game.win_ptr, 17, 0, (int (*)())close_game, &game);
+	mlx_hook(game.win_ptr, 17, 0, close_game, &game);
+	mlx_expose_hook(game.win_ptr, render_map, &game);
 	mlx_loop(game.mlx_ptr);
 	return (0);
 }

@@ -76,7 +76,7 @@ void	init_img(t_game *game, int x, int y)
 			game->img.exit, x * 32, y * 32);
 }
 
-void	render_map(t_game *game)
+int	render_map(t_game *game)
 {
 	int	x;
 	int	y;
@@ -92,4 +92,5 @@ void	render_map(t_game *game)
 		}
 		y++;
 	}
+	return (0);
 }
