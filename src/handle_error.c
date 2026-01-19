@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 11:15:12 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/16 10:34:09 by flox             ###   ########.fr       */
+/*   Created: 2026/01/19 12:08:33 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/19 12:08:33 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,25 +44,6 @@ static int	chk_extension(char *file)
 	return (FALSE);
 }
 
-int	chk_width(char **map, t_game *game)
-{
-	int	i;
-
-	if (!map || !map[0])
-		return (FALSE);
-	game->map_w = ft_strlen(map[0]);
-	i = 1;
-	while (map[i])
-	{
-		if ((int)ft_strlen(map[i]) != game->map_w)
-			{
-				ft_putendl_fd("Error\nMap is not rectangular", 1);
-				return (FALSE);
-			}
-		i++;
-	}
-	return (TRUE);
-}
 int	chk_map_walls(char **map, t_game *game)
 {
 	int	i;
@@ -110,4 +91,3 @@ int	chk_is_rectangular(char **map, t_game *game)
 	}
 	return (TRUE);
 }
-

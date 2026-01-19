@@ -15,7 +15,6 @@
 int	main(int ac, char **av)
 {
 	t_game	game;
-	int		i;
 
 	if (!arg_chk(ac, av))
 		return (1);
@@ -30,12 +29,11 @@ int	main(int ac, char **av)
 		return (1);
 	if (!chk_valid_path(game.map, &game))
 		return (1);
-	ft_putendl_fd("Valid", 1);
-	i = 0;
-	while (game.map[i])
-	{
-		printf("%s\n", game.map[i]);
-		i++;
-	}
+	ft_putendl_fd("Valid map - Launching game", 1);
+	init_graphics(&game);
+	render_map(&game);
+	mlx_hook(game.win_ptr, 2, 1L << 0, key_hook, &game);
+	mlx_hook(game.win_ptr, 17, 0, (int (*)())close_game, &game);
+	mlx_loop(game.mlx_ptr);
 	return (0);
 }

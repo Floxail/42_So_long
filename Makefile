@@ -14,21 +14,26 @@ SRCS		= $(SRC_DIR)/parsing.c \
 			 	$(SRC_DIR)/so_long.c \
 				$(SRC_DIR)/map_is_valid.c \
 				$(SRC_DIR)/flood_fill.c \
+				$(SRC_DIR)/graphic.c \
+				$(SRC_DIR)/hook.c \
+				$(SRC_DIR)/manage_game_err.c \
+				$(SRC_DIR)/manage_game.c
 # Object files
 OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Libraries
 LIBFT		= $(LIBFT_DIR)/libft.a
+MLX			= $(MLX_DIR)/libmlx.a
 
 # Compiler and flags
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror -Imlx_linux -O3 -I$(LIBFT_DIR)
-LDFLAGS		= -L$(LIBFT_DIR) -lft
+CFLAGS		= -Wall -Wextra -Werror -I$(MLX_DIR) -O3 -I$(LIBFT_DIR)
+LDFLAGS		= -L$(LIBFT_DIR) -lft -L$(MLX_DIR) -lmlx -lXext -lX11 -lm
 
 # Rules
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJS)
+$(NAME): $(LIBFT) $(MLX) $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME)
 	@echo "compiled successfully"
 
@@ -42,6 +47,10 @@ $(OBJ_DIR):
 $(LIBFT):
 	@echo "Building libft"
 	@$(MAKE) -C $(LIBFT_DIR)
+
+$(MLX):
+	@echo "Building MLX"
+	@$(MAKE) -C $(MLX_DIR)
 
 clean:
 	@$(MAKE) -C $(LIBFT_DIR) clean

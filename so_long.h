@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 08:06:19 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 08:06:56 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/19 12:19:08 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/19 12:19:12 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_img
 	void	*enemy;
 	int		img_w;
 	int		img_h;
-} t_img;
+}	t_img;
 
 typedef struct s_game
 {
@@ -50,7 +50,7 @@ typedef struct s_game
 	int		collect_count;
 	int		exit_count;
 	int		enemy_count;
-	t_img 	img;
+	t_img	img;
 }	t_game;
 
 char		**parse_map(char *filepath, t_game *game);
@@ -64,5 +64,6 @@ void		render_map(t_game *game);
 int			key_hook(int keycode, t_game *game);
 void		close_game(t_game *game);
 void		move_player(t_game *game, int x, int y);
+void		error_exit(t_game *game, char *str);
 
 #endif
