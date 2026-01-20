@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:29:32 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 12:29:39 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/20 08:47:27 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/20 08:48:08 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	init_window(t_game *game)
 	int	w;
 	int	h;
 
-	w = game->map_w * 64;
+	w = game->map_w *64;
 	h = game->map_h * 64;
 	game->win_ptr = mlx_new_window(game->mlx_ptr, w, h, "so-Long");
 	if (!game->win_ptr)
@@ -58,22 +58,22 @@ void	init_img(t_game *game, int x, int y)
 
 	tile = game->map[y][x];
 	mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-		game->img.floor, x * 32, y * 32);
+		game->img.floor, x * 64, y * 64);
 	if (tile == '1')
 		mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-			game->img.wall, x * 32, y * 32);
+			game->img.wall, x * 64, y * 64);
 	else if (tile == 'P')
 		mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-			game->img.player, x * 32, y * 32);
+			game->img.player, x * 64, y * 64);
 	else if (tile == 'C')
 		mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-			game->img.collectible, x * 32, y * 32);
+			game->img.collectible, x * 64, y * 64);
 	else if (tile == 'X')
 		mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-			game->img.enemy, x * 32, y * 32);
+			game->img.enemy, x * 64, y * 64);
 	else if (tile == 'E')
 		mlx_put_image_to_window(game->mlx_ptr, game->win_ptr,
-			game->img.exit, x * 32, y * 32);
+			game->img.exit, x * 64, y * 64);
 }
 
 int	render_map(t_game *game)
