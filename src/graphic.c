@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 08:47:27 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 08:48:08 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/20 10:47:13 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/20 10:47:13 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	init_window(t_game *game)
 
 	w = game->map_w *64;
 	h = game->map_h * 64;
-	game->win_ptr = mlx_new_window(game->mlx_ptr, w, h, "so-Long");
+	game->win_ptr = mlx_new_window(game->mlx_ptr, w, h, "so_Long");
 	if (!game->win_ptr)
 		error_exit(game, "Windoes creation failed");
 }

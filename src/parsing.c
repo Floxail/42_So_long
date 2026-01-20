@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 11:18:40 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/16 10:21:11 by flox             ###   ########.fr       */
+/*   Created: 2026/01/20 11:05:29 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/20 11:06:09 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	**fill_map(char *map, t_game *game)
 	int		i;
 
 	tmp_map = malloc(sizeof(char *) * (game->map_h + 1));
-	if (!map)
+	if (!tmp_map)
 		return (NULL);
 	fd = open(map, O_RDONLY);
 	i = 0;

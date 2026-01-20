@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 11:16:12 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 14:03:35 by flox             ###   ########.fr       */
+/*   Created: 2026/01/20 10:31:26 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/20 10:56:39 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 	if (!chk_map_content(game.map, &game))
 		return (1);
 	if (!chk_valid_path(game.map, &game))
-		return (1);
+		return (1); //Free ici ?
 	ft_putendl_fd("Valid map - Launching game", 1);
 	init_graphics(&game);
 	render_map(&game);
