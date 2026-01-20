@@ -6,7 +6,7 @@
 /*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:19:08 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 14:05:30 by flox             ###   ########.fr       */
+/*   Updated: 2026/01/20 14:02:42 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,11 @@ int			chk_map_content(char **map, t_game *game);
 int			chk_valid_path(char **map, t_game *game);
 void		init_graphics(t_game *game);
 int			render_map(t_game *game);
+void		init_img(t_game *game, int x, int y);
 int			key_hook(int keycode, t_game *game);
 int			close_game(t_game *game);
 void		move_player(t_game *game, int x, int y);
 void		error_exit(t_game *game, char *str);
+void		free_map(t_game *game);
 
 #endif

@@ -16,6 +16,8 @@ static int	chk_extension(char *file);
 
 int	arg_chk(int ac, char **av)
 {
+	int	fd;
+
 	if (ac != 2)
 	{
 		ft_putendl_fd("please put only one maps", 1);
@@ -26,11 +28,13 @@ int	arg_chk(int ac, char **av)
 		ft_putendl_fd("put a \".ber\" file please", 1);
 		return (FALSE);
 	}
-	if (open(av[1], O_RDONLY) == -1)
+	fd = open(av[1], O_RDONLY);
+	if (fd == -1)
 	{
 		ft_putendl_fd("reading map error", 1);
 		return (FALSE);
 	}
+	close(fd);
 	return (TRUE);
 }
 

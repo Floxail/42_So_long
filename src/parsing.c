@@ -43,6 +43,8 @@ static char	**fill_map(char *map, t_game *game)
 	if (!tmp_map)
 		return (NULL);
 	fd = open(map, O_RDONLY);
+	if (fd == -1)
+		return (free(tmp_map), NULL);
 	i = 0;
 	while (i < game->map_h)
 	{

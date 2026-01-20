@@ -204,7 +204,7 @@ static char *result[] = {
 ":X c #F2F1F0",
 ">X c #F6F5F3",
 ",X c #FCF8F7",
-"<X c None",
+"<X c #000000",
 /* pixels */
 "<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X@.+.+.+.+.+.+.+.+.<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X",
 "<X<X<X<X<X<X<X<X<X<X<X<X%.2.2.) 0 3 t b ^ ^ ' #.+.n u u u <X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X<X",

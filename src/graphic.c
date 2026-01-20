@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graphic.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:47:13 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 10:47:13 by flvejux          ###   ########.ch       */
+/*   Updated: 2026/01/20 18:04:50 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,19 @@ static void	init_window(t_game *game)
 {
 	int	w;
 	int	h;
+	int	screen_w;
+	int	screen_h;
 
-	w = game->map_w *64;
+	w = game->map_w * 64;
 	h = game->map_h * 64;
+	mlx_get_screen_size(game->mlx_ptr, &screen_w, &screen_h);
+	if (w > screen_w)
+		w = screen_w;
+	if (h > screen_h)
+		h = screen_h;
 	game->win_ptr = mlx_new_window(game->mlx_ptr, w, h, "so_Long");
 	if (!game->win_ptr)
-		error_exit(game, "Windoes creation failed");
+		error_exit(game, "Window creation failed");
 }
 
 void	init_graphics(t_game *game)

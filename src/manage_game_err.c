@@ -6,7 +6,7 @@
 /*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 08:36:53 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 14:02:52 by flox             ###   ########.fr       */
+/*   Updated: 2026/01/20 14:02:20 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	free_images(t_game *game)
 		mlx_destroy_image(game->mlx_ptr, game->img.exit);
 }
 
-static void	free_map(t_game *game)
+void	free_map(t_game *game)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ static void	free_map(t_game *game)
 	free(game->map);
 }
 
-int close_game(t_game *game)
+int	close_game(t_game *game)
 {
 	if (!game)
 		exit(0);

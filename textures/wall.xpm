@@ -4,7 +4,7 @@ static char *_a940fbd66e340eaa549c3e9655485a1AjJati0fxpZevASg[] = {
 "64 64 222 2 ",
 "   c #47704C",
 ".  c black",
-"X  c None",
+"X  c #000000",
 "o  c gray51",
 "O  c #848484",
 "+  c gray8",
