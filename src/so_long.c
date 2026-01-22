@@ -6,7 +6,7 @@
 /*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:31:26 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 14:15:37 by flox             ###   ########.fr       */
+/*   Updated: 2026/01/22 11:19:46 by flox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	main(int ac, char **av)
 	if (!game.map)
 		return (1);
 	if (!chk_is_rectangular(game.map, &game) || !chk_map_walls(game.map, &game)
-		|| !chk_map_content(game.map, &game) || !chk_valid_path(game.map, &game))
+		|| !chk_map_content(game.map, &game)
+		|| !chk_valid_path(game.map, &game))
 		return (free_map(&game), 1);
 	ft_putendl_fd("Valid map - Launching game", 1);
 	init_graphics(&game);

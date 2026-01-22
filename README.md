@@ -48,10 +48,10 @@ Maps must be in `.ber` format and follow these requirements:
 - Valid characters: 0 (empty), 1 (wall), P (player), C (collectible), X (Enemy), E (exit)
 
 ### Controls
-- **W/↑** - Move up
-- **A/←** - Move left
-- **S/↓** - Move down
-- **D/→** - Move right
+- **W** - Move up
+- **A** - Move left
+- **S** - Move down
+- **D** - Move right
 - **ESC** - Close the game
 
 ## Resources
