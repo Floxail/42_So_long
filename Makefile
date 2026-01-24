@@ -6,7 +6,7 @@
 #    By: flox <flox@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 11:21:42 by flox              #+#    #+#              #
-#    Updated: 2026/01/22 11:21:45 by flox             ###   ########.fr        #
+#    Updated: 2026/01/24 09:59:37 by flox             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 LIBFT		= $(LIBFT_DIR)/libft.a
 MLX			= $(MLX_DIR)/libmlx.a
 
-# Compiler and flags
+# Compiler and flags1
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -I$(MLX_DIR) -O3 -I$(LIBFT_DIR)
 LDFLAGS		= -L$(LIBFT_DIR) -lft -L$(MLX_DIR) -lmlx -lXext -lX11 -lm
