@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 09:20:31 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:20:31 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/25 09:26:43 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:26:43 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main(int ac, char **av)
 {
 	t_game	game;
 
+	ft_bzero(&game, sizeof(t_game));
 	game.moves = 0;
 	if (!arg_chk(ac, av))
 		return (1);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 09:21:37 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:21:37 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/25 09:27:06 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:27:10 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	close_game(t_game *game)
 	}
 	free_map(game);
 	exit(0);
+	return (0);
 }
 
 void	error_exit(t_game *game, char *str)
