@@ -3,15 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graphic.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2026/01/25 09:12:50 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:12:50 by flvejux          ###   ########.ch       */
-=======
-/*   Created: 2026/01/20 10:47:13 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/24 10:10:02 by flox             ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Created: 2026/01/25 09:21:30 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:21:30 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 

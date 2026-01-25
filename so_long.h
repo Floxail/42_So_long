@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:19:08 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:16:38 by flox             ###   ########.fr       */
+/*   Created: 2026/01/25 09:21:15 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:21:15 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int			key_hook(int keycode, t_game *game);
 int			close_game(t_game *game);
 void		move_player(t_game *game, int x, int y);
 void		error_exit(t_game *game, char *str);
+void		free_map(t_game *game);
 
 #endif

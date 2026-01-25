@@ -3,15 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2026/01/25 09:12:31 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:12:31 by flvejux          ###   ########.ch       */
-=======
-/*   Created: 2026/01/20 11:05:29 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/22 11:20:19 by flox             ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Created: 2026/01/25 09:20:06 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:20:06 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 

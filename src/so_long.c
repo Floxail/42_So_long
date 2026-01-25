@@ -3,15 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2026/01/25 09:14:23 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:14:39 by flvejux          ###   ########.ch       */
-=======
-/*   Created: 2026/01/20 10:31:26 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/22 11:19:46 by flox             ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Created: 2026/01/25 09:20:31 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:20:31 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +22,10 @@ int	main(int ac, char **av)
 	game.map = parse_map(av[1], &game);
 	if (!game.map)
 		return (1);
-<<<<<<< HEAD
-	if (!chk_is_rectangular(game.map, &game))
-		return (1);
-	if (!chk_map_walls(game.map, &game))
-		return (1);
-	if (!chk_map_content(game.map, &game))
-		return (1);
-	if (!chk_valid_path(game.map, &game))
-		return (1);
-=======
 	if (!chk_is_rectangular(game.map, &game) || !chk_map_walls(game.map, &game)
 		|| !chk_map_content(game.map, &game)
 		|| !chk_valid_path(game.map, &game))
 		return (free_map(&game), 1);
->>>>>>> refs/remotes/origin/main
 	ft_putendl_fd("Valid map - Launching game", 1);
 	init_graphics(&game);
 	render_map(&game);
