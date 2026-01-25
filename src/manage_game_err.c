@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2026/01/25 09:13:50 by flvejux           #+#    #+#             */
 /*   Updated: 2026/01/25 09:14:10 by flvejux          ###   ########.ch       */
+=======
+/*   Created: 2019/01/20 08:36:53 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/22 11:20:07 by flox             ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +33,7 @@ static void	free_images(t_game *game)
 		mlx_destroy_image(game->mlx_ptr, game->img.exit);
 }
 
-static void	free_map(t_game *game)
+void	free_map(t_game *game)
 {
 	int	i;
 

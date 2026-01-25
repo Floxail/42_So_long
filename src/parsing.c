@@ -3,10 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2026/01/25 09:12:31 by flvejux           #+#    #+#             */
 /*   Updated: 2026/01/25 09:12:31 by flvejux          ###   ########.ch       */
+=======
+/*   Created: 2026/01/20 11:05:29 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/22 11:20:19 by flox             ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +48,8 @@ static char	**fill_map(char *map, t_game *game)
 	if (!tmp_map)
 		return (NULL);
 	fd = open(map, O_RDONLY);
+	if (fd == -1)
+		return (free(tmp_map), NULL);
 	i = 0;
 	while (i < game->map_h)
 	{
