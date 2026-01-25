@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   manage_game.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:08:27 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 14:09:00 by flox             ###   ########.fr       */
+/*   Created: 2026/01/25 09:11:12 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:11:12 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ static int	check_box(t_game *game, int x, int y)
 	if (game->map[y][x] == 'C')
 		game->collect_count -= 1;
 	return (1);
+}
+
+void	display_moves(t_game *game)
+{
+	char	*moves;
+	char	*str;
+
+	moves = ft_itoa(game->moves);
+	str = ft_strjoin("Moves : ", moves);
+	mlx_put_image_to_window(game->mlx_ptr, game->win_ptr, game->img.wall, 0, 0);
+	mlx_string_put(game->mlx_ptr, game->win_ptr, 10, 20, 0xFFFFFF, str);
+	free(moves);
+	free(str);
 }
 
 void	move_player(t_game *game, int x, int y)

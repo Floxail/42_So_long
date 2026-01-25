@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 11:05:29 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 11:06:09 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/25 09:12:31 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:12:31 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,3 @@ char	**parse_map(char *map, t_game *game)
 		return (NULL);
 	return (fill_map(map, game));
 }
-
-

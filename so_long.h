@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flox <flox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:19:08 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 14:05:30 by flox             ###   ########.fr       */
+/*   Created: 2026/01/25 09:14:57 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:14:57 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ int			key_hook(int keycode, t_game *game);
 int			close_game(t_game *game);
 void		move_player(t_game *game, int x, int y);
 void		error_exit(t_game *game, char *str);
-
+void		display_moves(t_game *game);
 #endif

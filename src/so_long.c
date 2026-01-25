@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 10:31:26 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 10:56:39 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/25 09:14:23 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:14:39 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 	if (!chk_map_content(game.map, &game))
 		return (1);
 	if (!chk_valid_path(game.map, &game))
-		return (1); //Free ici ?
+		return (1);
 	ft_putendl_fd("Valid map - Launching game", 1);
 	init_graphics(&game);
 	render_map(&game);

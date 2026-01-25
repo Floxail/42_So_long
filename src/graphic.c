@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 10:47:13 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/20 10:47:13 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/25 09:12:50 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/25 09:12:50 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	init_window(t_game *game)
 	int	w;
 	int	h;
 
-	w = game->map_w *64;
+	w = game->map_w * 64;
 	h = game->map_h * 64;
 	game->win_ptr = mlx_new_window(game->mlx_ptr, w, h, "so_Long");
 	if (!game->win_ptr)
