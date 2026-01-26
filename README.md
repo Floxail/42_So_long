@@ -36,7 +36,7 @@ make fclean
 
 Example:
 ```bash
-./so_long maps/map.ber
+./so_long maps/little.ber
 ```
 
 ### Map Format
