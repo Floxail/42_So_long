@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/29 09:40:20 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/29 09:43:44 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/29 11:59:27 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/29 12:16:53 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	check_box(t_game *game, int x, int y)
 			ft_putendl_fd("BRAVO", 1);
 			close_game(game);
 		}
-		return (0);
+		return (1);
 	}
 	if (game->map[y][x] == 'C')
 		game->collect_count -= 1;
@@ -54,8 +54,10 @@ void	move_player(t_game *game, int x, int y)
 {
 	if (!check_box(game, x, y))
 		return ;
-	game->map[game->player_y][game->player_x] = '0';
-	game->map[y][x] = 'P';
+	if (game->map[game->player_y][game->player_x] != 'E')
+        game->map[game->player_y][game->player_x] = '0';
+	if(game->map[y][x] != 'E')
+		game->map[y][x] = 'P';
 	game->player_x = x;
 	game->player_y = y;
 	game->moves += 1;
