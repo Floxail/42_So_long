@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 11:37:00 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 11:39:40 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/29 09:40:20 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/29 09:43:44 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	display_moves(t_game *game)
 	moves = ft_itoa(game->moves);
 	str = ft_strjoin("Moves : ", moves);
 	mlx_put_image_to_window(game->mlx_ptr, game->win_ptr, game->img.wall, 0, 0);
-	mlx_string_put(game->mlx_ptr, game->win_ptr, 10, 20, 0XFF1D8D, str);
-	mlx_string_put(game->mlx_ptr, game->win_ptr, 11, 20, 0XFF1D8D, str);
-	mlx_string_put(game->mlx_ptr, game->win_ptr, 10, 21, 0XFF1D8D, str);
+	mlx_string_put(game->mlx_ptr, game->win_ptr, 25, 40, 0XFF1D8D, str);
+	mlx_string_put(game->mlx_ptr, game->win_ptr, 26, 40, 0XFF1D8D, str);
+	mlx_string_put(game->mlx_ptr, game->win_ptr, 25, 41, 0XFF1D8D, str);
 	free(moves);
 	free(str);
 }
