@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/29 14:40:47 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/29 14:40:47 by flvejux          ###   ########.ch       */
+/*   Created: 2026/02/02 11:35:39 by flvejux           #+#    #+#             */
+/*   Updated: 2026/02/02 11:36:01 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ void	move_player(t_game *game, int x, int y)
 	if (!check_box(game, x, y))
 		return ;
 	if (game->map[game->player_y][game->player_x] != 'E')
-        game->map[game->player_y][game->player_x] = '0';
-	if(game->map[y][x] != 'E')
+		game->map[game->player_y][game->player_x] = '0';
+	if (game->map[y][x] != 'E')
 		game->map[y][x] = 'P';
 	game->player_x = x;
 	game->player_y = y;

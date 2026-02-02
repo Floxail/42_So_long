@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 12:08:33 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/19 12:08:33 by flvejux          ###   ########.ch       */
+/*   Created: 2026/02/02 11:34:26 by flvejux           #+#    #+#             */
+/*   Updated: 2026/02/02 11:34:26 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	chk_extension(char *file)
 	char	*ext;
 
 	ext = ft_strrchr(file, '.');
-	if (ext && ft_strncmp(ext, ".ber", 4) == 0)
+	if (ext && ft_strncmp(ext, ".ber", 5) == 0)
 		return (TRUE);
 	return (FALSE);
 }
