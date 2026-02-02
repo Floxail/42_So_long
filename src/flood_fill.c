@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 09:11:05 by flvejux           #+#    #+#             */
-/*   Updated: 2026/01/25 09:11:05 by flvejux          ###   ########.ch       */
+/*   Created: 2026/01/29 14:48:27 by flvejux           #+#    #+#             */
+/*   Updated: 2026/01/29 14:48:46 by flvejux          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static void	flood_fill(char **map, int x, int y, t_game *game)
 {
 	if (y < 0 || y >= game->map_h || x < 0 || x >= game->map_w)
 		return ;
-	if (map[y][x] == '1' || map[y][x] == 'F')
+	if (map[y][x] == '1' || map[y][x] == 'X' || map[y][x] == 'F')
 		return ;
 	map[y][x] = 'F';
 	flood_fill(map, x + 1, y, game);
